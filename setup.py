@@ -36,6 +36,6 @@ setup(
     install_requires=[
     ],
     tests_require=[
-        # 'pytest',
+        'pytest',
     ],
 )

@@ -11,9 +11,13 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).      #
 #*************************************************************************#
 
+SANDBOX = 'SANDBOX'
+PRODUCTION = 'PRODUCTION'
+VALID_MODE = [SANDBOX,PRODUCTION]
+
 BANKS = {
-    '001': {'NAME': 'BANCO DO BRASIL S.A.', 'ACTIVE': False},
-    '033': {'NAME': 'BANCO SANTANDER (BRASIL) S.A.', 'ACTIVE': False},
-    '104': {'NAME': 'CAIXA ECONOMICA FEDERAL', 'ACTIVE': False},
-    '341': {'NAME': 'ITAÚ UNIBANCO S.A.', 'ACTIVE': True},
+    '001': {'NAME': 'BANCO DO BRASIL S.A.', 'ACTIVE': False, 'SHORT': 'BBB'},
+    '033': {'NAME': 'BANCO SANTANDER (BRASIL) S.A.', 'ACTIVE': False, 'SHORT': 'SANTANDER'},
+    '104': {'NAME': 'CAIXA ECONOMICA FEDERAL', 'ACTIVE': False, 'SHORT': 'CEF'},
+    '341': {'NAME': 'ITAÚ UNIBANCO S.A.', 'ACTIVE': True, 'SHORT': 'ITAU'},
 }
