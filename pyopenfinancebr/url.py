@@ -11,7 +11,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).      #
 #*************************************************************************#
 
-from .tools import SANDBOX, PRODUCTION, BANKS, VALID_MODE
+from .tools import SANDBOX, PRODUCTION, VALID_MODE
 
 class urlBank(object):
     _mode = False
@@ -19,6 +19,15 @@ class urlBank(object):
     def __init__(self, mode=False):
         if bool(mode) and mode in VALID_MODE:
             self._mode = mode
+        else:
+            self._mode = False
+    
+    def __str__(self):
+        url = self.url()
+        if bool(url):
+            return self.url()
+        else:
+            return 'URL Not defined'
     
     @property
     def mode(self):
@@ -31,12 +40,14 @@ class urlBank(object):
         else:
             raise Exception("Sorry, this mode does not exist") 
 
-    @property
     def url(self):
         return False
 
-class urlItau(urlBank):
-    @property
+class Itau(urlBank):
+
+    def __init__(self, mode):
+        super().__init__(mode)
+    
     def url(self):
         if self._mode == SANDBOX:
             return 'https://api.itau/open-banking'

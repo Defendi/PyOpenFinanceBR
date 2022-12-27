@@ -34,6 +34,7 @@ setup(
     description='PyOpenFinanceBR é uma biblioteca para acesso ao Open Finance Brasil',
     long_description=open('README.md', 'r').read(),
     install_requires=[
+        'requests',
     ],
     tests_require=[
         'pytest',

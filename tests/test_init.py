@@ -1,5 +1,7 @@
 from pyopenfinancebr import OpenFinanceBR
 
-itau = OpenFinanceBR('341','client_id','client_secret')
+itau = OpenFinanceBR('SANDBOX','341','client_id','client_secret')
 
 print(itau)
+
+print(itau.URL())
